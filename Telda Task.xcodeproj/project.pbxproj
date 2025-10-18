@@ -6,15 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8BB135152EA459C600C16019 /* TeldaDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB135142EA459C600C16019 /* TeldaDomain */; };
+		8BB135212EA45FE700C16019 /* TeldaNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB135202EA45FE700C16019 /* TeldaNetworking */; };
+		8BB135232EA45FEC00C16019 /* TeldaData in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB135222EA45FEC00C16019 /* TeldaData */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8BB134F82EA4565C00C16019 /* Telda Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telda Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB135122EA4594F00C16019 /* TeldaDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TeldaDomain; path = ../TeldaDomain; sourceTree = SOURCE_ROOT; };
+		8BB1351E2EA45F7100C16019 /* TeldaData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TeldaData; path = ../TeldaData; sourceTree = SOURCE_ROOT; };
+		8BB1351F2EA45FD300C16019 /* TeldaNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TeldaNetworking; path = ../TeldaNetworking; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		8BB1350A2EA4565F00C16019 /* Exceptions for "Telda Task" folder in "Telda Task" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Infrastructure/Info.plist,
 			);
 			target = 8BB134F72EA4565C00C16019 /* Telda Task */;
 		};
@@ -36,6 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB135232EA45FEC00C16019 /* TeldaData in Frameworks */,
+				8BB135152EA459C600C16019 /* TeldaDomain in Frameworks */,
+				8BB135212EA45FE700C16019 /* TeldaNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +57,11 @@
 		8BB134EF2EA4565C00C16019 = {
 			isa = PBXGroup;
 			children = (
+				8BB1351F2EA45FD300C16019 /* TeldaNetworking */,
+				8BB1351E2EA45F7100C16019 /* TeldaData */,
+				8BB135122EA4594F00C16019 /* TeldaDomain */,
 				8BB134FA2EA4565C00C16019 /* Telda Task */,
+				8BB135132EA459C600C16019 /* Frameworks */,
 				8BB134F92EA4565C00C16019 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +72,13 @@
 				8BB134F82EA4565C00C16019 /* Telda Task.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8BB135132EA459C600C16019 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +101,9 @@
 			);
 			name = "Telda Task";
 			packageProductDependencies = (
+				8BB135142EA459C600C16019 /* TeldaDomain */,
+				8BB135202EA45FE700C16019 /* TeldaNetworking */,
+				8BB135222EA45FEC00C16019 /* TeldaData */,
 			);
 			productName = "Telda Task";
 			productReference = 8BB134F82EA4565C00C16019 /* Telda Task.app */;
@@ -140,6 +166,8 @@
 /* Begin XCBuildConfiguration section */
 		8BB1350C2EA4565F00C16019 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 8BB134FA2EA4565C00C16019 /* Telda Task */;
+			baseConfigurationReferenceRelativePath = Infrastructure/Secrets.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -147,12 +175,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4RMMV9J9NG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Telda Task/Info.plist";
+				INFOPLIST_FILE = "Telda Task/Infrastructure/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -160,6 +189,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Telda-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -168,6 +201,8 @@
 		};
 		8BB1350D2EA4565F00C16019 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 8BB134FA2EA4565C00C16019 /* Telda Task */;
+			baseConfigurationReferenceRelativePath = Infrastructure/Secrets.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -175,12 +210,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4RMMV9J9NG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Telda Task/Info.plist";
+				INFOPLIST_FILE = "Telda Task/Infrastructure/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -188,6 +224,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Telda-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -196,6 +236,8 @@
 		};
 		8BB1350E2EA4565F00C16019 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 8BB134FA2EA4565C00C16019 /* Telda Task */;
+			baseConfigurationReferenceRelativePath = Infrastructure/Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -259,6 +301,8 @@
 		};
 		8BB1350F2EA4565F00C16019 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 8BB134FA2EA4565C00C16019 /* Telda Task */;
+			baseConfigurationReferenceRelativePath = Infrastructure/Secrets.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -335,6 +379,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BB135142EA459C600C16019 /* TeldaDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TeldaDomain;
+		};
+		8BB135202EA45FE700C16019 /* TeldaNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TeldaNetworking;
+		};
+		8BB135222EA45FEC00C16019 /* TeldaData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TeldaData;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8BB134F02EA4565C00C16019 /* Project object */;
 }
