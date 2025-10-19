@@ -23,4 +23,16 @@ public final class MovieDetailsRepositoryImplementation: MovieDetailsRepositoryP
         return data.toDomain()
     }
     
+    public func getSimilarMovies(id: Int) async throws -> MoviesEntity {
+        let request = SimilarMoviesRequest(id: id)
+        let data = try await self.networking.dispatch(request)
+        return data.toDomain()
+    }
+    
+    public func getMovieCast(id: Int) async throws -> MovieCreditsEntity {
+        let request = MovieCastRequest(id: id)
+        let data = try await self.networking.dispatch(request)
+        return data.toDomain()
+    }
+    
 }

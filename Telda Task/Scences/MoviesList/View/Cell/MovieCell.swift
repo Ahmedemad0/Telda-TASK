@@ -21,7 +21,7 @@ class MovieCell: UITableViewCell {
         movieTitle.text = model.title
         dateLabel.text = model.releaseDate
         overviewLabel.text = model.overview
-        favoriteImage.tintColor = model.favoriteTintColor
         movieImage.loadImage(from: model.posterURL)
+        favoriteImage.tintColor = UserDefaultsManager.shared.favouriteIDs.contains(model.id ?? 0) ? .red : .lightGray
     }
 }

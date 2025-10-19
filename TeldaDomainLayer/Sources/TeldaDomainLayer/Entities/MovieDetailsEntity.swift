@@ -13,12 +13,18 @@ public struct MovieDetailsEntity {
     public var id: Int
     public var overview: String
     public var releaseDate: String
-    public var revenue: Int
+    public var revenue: String
     public var status: String
     public var tagline: String
     public var title: String
     
-    public init(backdropPath: String, id: Int, overview: String, releaseDate: String, revenue: Int, status: String, tagline: String, title: String) {
+    public var posterURL: String {
+        "https://image.tmdb.org/t/p/w200\(backdropPath)"
+    }
+    
+   
+    
+    public init(backdropPath: String, id: Int, overview: String, releaseDate: String, revenue: String, status: String, tagline: String, title: String) {
         self.backdropPath = backdropPath
         self.id = id
         self.overview = overview

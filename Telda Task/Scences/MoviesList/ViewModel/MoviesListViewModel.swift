@@ -16,7 +16,6 @@ final class MoviesListViewModel {
     private var searchTask: Task<Void, Never>?
 
     @Published private(set) var movies: [MovieEntity] = []
-    @Published private(set) var isLoading = false
     @Published private(set) var errorMessage: String?
 
     init(useCase: MoviesListUseCaseProtocol) {
@@ -27,28 +26,24 @@ final class MoviesListViewModel {
     }
 
     func updateQuery(_ query: String) {
-        // Cancel any in-flight debounce task and start a new one
+        
         searchTask?.cancel()
         searchTask = Task { [weak self] in
             guard let self else { return }
-            // Debounce window (e.g., 400ms)
+            
             try? await Task.sleep(nanoseconds: 400_000_000)
             await self.getMovies(query: query)
         }
     }
 
     func getMovies(query: String = "") async {
-        isLoading = true
-        errorMessage = nil
         do {
             let response = try await useCase.execute(query: query)
             movies = response.results ?? []
-            
         } catch {
             errorMessage = error.localizedDescription
             movies = []
         }
-        isLoading = false
     }
 }
 

@@ -8,4 +8,6 @@
 
 public protocol MovieDetailsRepositoryProtocol {
     func getMovieDetails(id: Int) async throws -> MovieDetailsEntity
+    func getSimilarMovies(id: Int) async throws -> MoviesEntity
+    func getMovieCast(id: Int) async throws -> MovieCreditsEntity
 }

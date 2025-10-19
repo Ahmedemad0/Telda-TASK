@@ -22,9 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
            
         let mainNavigationController = UINavigationController(rootViewController: MoviesListViewController(viewModel: MoviesListViewModel(useCase: MoviesListUseCase(repository: MoviesListRepositoryImplementation(networking: DefaultNetworkDispatcher())))))
-        
-        mainNavigationController.isNavigationBarHidden = true
-           
+                   
         window.rootViewController = mainNavigationController
         window.makeKeyAndVisible()
            
