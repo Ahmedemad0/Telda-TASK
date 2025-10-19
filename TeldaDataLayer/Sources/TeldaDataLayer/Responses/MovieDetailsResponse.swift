@@ -34,9 +34,9 @@ public extension MovieDetailsResponse {
             id: self.id ?? 0,
             overview: self.overview ?? "No overview available.",
             releaseDate: self.releaseDate ?? "N/A",
-            revenue: self.revenue ?? 0,
+            revenue: "\(self.revenue ?? 0)",
             status: self.status ?? "Unknown",
-            tagline: self.tagline ?? "",
+            tagline: self.tagline ?? "No tagline available",
             title: self.title ?? "No title available"
         )
     }

@@ -28,12 +28,6 @@ public struct MovieEntity: Identifiable {
     public var releaseDate: String?
     public var title: String?
     
-    public var isFavorite: Bool = false
-    
-    public var favoriteTintColor: UIColor {
-        isFavorite ? .red : .lightGray
-    }
-    
     public var posterURL: String {
         "https://image.tmdb.org/t/p/w200\(posterPath ?? "")"
     }

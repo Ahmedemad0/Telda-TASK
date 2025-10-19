@@ -7,6 +7,8 @@
 
 import UIKit
 import TeldaDomainLayer
+import TeldaDataLayer
+import TeldaNetworkLayer
 import TeldaCommon
 import Combine
 
@@ -34,6 +36,13 @@ final class MoviesListViewController: UIViewController {
         searchTF.delegate = self
 
         bindViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Task {
+            await viewModel.getMovies()
+        }
     }
 
     private func configureTableView() {
@@ -65,8 +74,9 @@ extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let movieDetailsViewController = MoviesDetailsViewController(viewModel: MoviesDetailsViewModel(repo: MovieDetailsRepositoryImplementation(networking: DefaultNetworkDispatcher()), movieId: viewModel.movies[indexPath.row].id ?? 0))
         
+        navigationController?.pushViewController(movieDetailsViewController, animated: true)
     }
 }
 
