@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BB135152EA459C600C16019 /* TeldaDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB135142EA459C600C16019 /* TeldaDomain */; };
-		8BB135212EA45FE700C16019 /* TeldaNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB135202EA45FE700C16019 /* TeldaNetworking */; };
-		8BB135232EA45FEC00C16019 /* TeldaData in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB135222EA45FEC00C16019 /* TeldaData */; };
+		8BB1359B2EA4642A00C16019 /* TeldaDataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB1359A2EA4642A00C16019 /* TeldaDataLayer */; };
+		8BB1359D2EA4642E00C16019 /* TeldaDomainLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB1359C2EA4642E00C16019 /* TeldaDomainLayer */; };
+		8BB1359F2EA4643100C16019 /* TeldaNetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = 8BB1359E2EA4643100C16019 /* TeldaNetworkLayer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +45,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB135232EA45FEC00C16019 /* TeldaData in Frameworks */,
-				8BB135152EA459C600C16019 /* TeldaDomain in Frameworks */,
-				8BB135212EA45FE700C16019 /* TeldaNetworking in Frameworks */,
+				8BB1359F2EA4643100C16019 /* TeldaNetworkLayer in Frameworks */,
+				8BB1359B2EA4642A00C16019 /* TeldaDataLayer in Frameworks */,
+				8BB1359D2EA4642E00C16019 /* TeldaDomainLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +57,8 @@
 		8BB134EF2EA4565C00C16019 = {
 			isa = PBXGroup;
 			children = (
-				8BB135732EA4633800C16019 /* TeldaDataLayer */,
 				8BB135722EA4632300C16019 /* TeldaDomainLayer */,
+				8BB135732EA4633800C16019 /* TeldaDataLayer */,
 				8BB135712EA4630D00C16019 /* TeldaNetworkLayer */,
 				8BB134FA2EA4565C00C16019 /* Telda Task */,
 				8BB135132EA459C600C16019 /* Frameworks */,
@@ -101,9 +101,9 @@
 			);
 			name = "Telda Task";
 			packageProductDependencies = (
-				8BB135142EA459C600C16019 /* TeldaDomain */,
-				8BB135202EA45FE700C16019 /* TeldaNetworking */,
-				8BB135222EA45FEC00C16019 /* TeldaData */,
+				8BB1359A2EA4642A00C16019 /* TeldaDataLayer */,
+				8BB1359C2EA4642E00C16019 /* TeldaDomainLayer */,
+				8BB1359E2EA4643100C16019 /* TeldaNetworkLayer */,
 			);
 			productName = "Telda Task";
 			productReference = 8BB134F82EA4565C00C16019 /* Telda Task.app */;
@@ -381,17 +381,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8BB135142EA459C600C16019 /* TeldaDomain */ = {
+		8BB1359A2EA4642A00C16019 /* TeldaDataLayer */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TeldaDomain;
+			productName = TeldaDataLayer;
 		};
-		8BB135202EA45FE700C16019 /* TeldaNetworking */ = {
+		8BB1359C2EA4642E00C16019 /* TeldaDomainLayer */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TeldaNetworking;
+			productName = TeldaDomainLayer;
 		};
-		8BB135222EA45FEC00C16019 /* TeldaData */ = {
+		8BB1359E2EA4643100C16019 /* TeldaNetworkLayer */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = TeldaData;
+			productName = TeldaNetworkLayer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
