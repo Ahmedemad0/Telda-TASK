@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import TeldaDomainLayer
 
 // MARK: - MoviesResponse
 public struct MoviesResponse: Codable {
@@ -39,4 +40,28 @@ public struct Movie: Codable {
     }
     
     public init() { }
+}
+
+extension MoviesResponse {
+    func toDomain() -> MoviesEntity {
+        return MoviesEntity(
+            page: self.page,
+            results: self.results?.map { $0.toDomain() },
+            totalPages: self.totalPages,
+            totalResults: self.totalResults
+        )
+    }
+}
+
+
+extension Movie {
+    func toDomain() -> MovieEntity {
+        return MovieEntity(
+            id: self.id,
+            overview: self.overview,
+            posterPath: self.posterPath,
+            releaseDate: self.releaseDate,
+            title: self.title
+        )
+    }
 }
