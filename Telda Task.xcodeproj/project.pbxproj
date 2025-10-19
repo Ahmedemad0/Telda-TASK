@@ -14,9 +14,9 @@
 
 /* Begin PBXFileReference section */
 		8BB134F82EA4565C00C16019 /* Telda Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telda Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BB135122EA4594F00C16019 /* TeldaDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TeldaDomain; path = ../TeldaDomain; sourceTree = SOURCE_ROOT; };
-		8BB1351E2EA45F7100C16019 /* TeldaData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TeldaData; path = ../TeldaData; sourceTree = SOURCE_ROOT; };
-		8BB1351F2EA45FD300C16019 /* TeldaNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TeldaNetworking; path = ../TeldaNetworking; sourceTree = SOURCE_ROOT; };
+		8BB135712EA4630D00C16019 /* TeldaNetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TeldaNetworkLayer; sourceTree = "<group>"; };
+		8BB135722EA4632300C16019 /* TeldaDomainLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TeldaDomainLayer; sourceTree = "<group>"; };
+		8BB135732EA4633800C16019 /* TeldaDataLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TeldaDataLayer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -57,9 +57,9 @@
 		8BB134EF2EA4565C00C16019 = {
 			isa = PBXGroup;
 			children = (
-				8BB1351F2EA45FD300C16019 /* TeldaNetworking */,
-				8BB1351E2EA45F7100C16019 /* TeldaData */,
-				8BB135122EA4594F00C16019 /* TeldaDomain */,
+				8BB135732EA4633800C16019 /* TeldaDataLayer */,
+				8BB135722EA4632300C16019 /* TeldaDomainLayer */,
+				8BB135712EA4630D00C16019 /* TeldaNetworkLayer */,
 				8BB134FA2EA4565C00C16019 /* Telda Task */,
 				8BB135132EA459C600C16019 /* Frameworks */,
 				8BB134F92EA4565C00C16019 /* Products */,
