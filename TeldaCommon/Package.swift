@@ -4,26 +4,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "TeldaDataLayer",
+    name: "TeldaCommon",
     platforms: [
         .iOS(.v14)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "TeldaDataLayer",
-            targets: ["TeldaDataLayer"]),
-    ],
-    dependencies: [
-        .package(path: "../TeldaNetworkLayer"),
-        .package(path: "../TeldaDomainLayer"),
-        .package(path: "../TeldaCommon"),
+            name: "TeldaCommon",
+            targets: ["TeldaCommon"]),
     ],
     targets: [
+        // Targets are the basic building blocks of a package, defining a module or a test suite.
+        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "TeldaDataLayer",
-            dependencies: ["TeldaNetworkLayer", "TeldaDomainLayer", "TeldaCommon"]
-        )
+            name: "TeldaCommon"),
 
     ]
 )

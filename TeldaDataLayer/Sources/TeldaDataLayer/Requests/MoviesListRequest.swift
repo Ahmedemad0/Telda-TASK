@@ -16,7 +16,7 @@ public struct MoviesListRequest: RequestType {
     public var path: String { "/popular" }
     public var method: HttpMethod = .get
     public var queryParameters: [String: String] {
-        ["api_key" : ""]
+        ["api_key" : "674699b94fa639aa1d949a3ddd471dea"]
     }
 
     public let responseDecoder: (Data) throws -> MoviesResponse = { data in
