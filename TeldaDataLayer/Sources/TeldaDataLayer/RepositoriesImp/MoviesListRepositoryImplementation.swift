@@ -8,6 +8,7 @@
 import Foundation
 import TeldaNetworkLayer
 import TeldaDomainLayer
+import TeldaCommon
 
 public final class MoviesListRepositoryImplementation: MoviesListRepositoryProtocol {
     
@@ -19,6 +20,8 @@ public final class MoviesListRepositoryImplementation: MoviesListRepositoryProto
     
     public func getMoviesList() async throws -> MoviesEntity {
         let request = MoviesListRequest()
+        print(APIKeyManager.apiKey)
+        print(request.queryParameters)
         let data = try await self.networking.dispatch(request)
         return data.toDomain()
     }

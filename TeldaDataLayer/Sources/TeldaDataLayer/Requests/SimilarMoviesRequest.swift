@@ -8,17 +8,18 @@
 
 import Foundation
 import TeldaNetworkLayer
+import TeldaCommon
 
 public struct SimilarMoviesRequest: RequestType {
     
     public typealias ResponseType = MoviesResponse
 
-    public var baseUrl: URL { URL(string: "https://api.themoviedb.org/3")! }
+    public var baseUrl: URL { Constants.baseURL }
     public var path: String { "/movie/\(id)/similar" }
     public var method: HttpMethod = .get
     
     public var queryParameters: [String: String] {
-        ["api_key" : "674699b94fa639aa1d949a3ddd471dea"]
+        ["api_key" : APIKeyManager.apiKey]
     }
 
     public let responseDecoder: (Data) throws -> MoviesResponse = { data in
